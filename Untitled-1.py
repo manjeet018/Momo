@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Are you momo?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #ffe6f2;
+        margin-top: 80px;
+    }
+    #container {
+        display: block;
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    #yes {
+        background: #ff66a3;
+        color: white;
+    }
+    #no {
+        background: #cccccc;
+        color: black;
+        position: relative;
+    }
+    #media {
+        display: none;
+        margin-top: 40px;
+    }
+    img, video {
+        width: 70%;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <h1>Are you momo? 😼</h1>
+
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+</div>
+
+<div id="media">
+    <h2>Hehe, I knew it 💗</h2>
+
+    <!-- Yaha apni bestie ki photo ka link daal -->
+    <img src="YOUR_IMAGE_LINKd:\Downloads\Cutie\Gemini_Generated_Image_mfcpecmfcpecmfcp.png" alt="Cute Pic">
+
+    <!-- Yaha video ka link daal -->
+    <video controls>
+        <source src="YOUR_VIDEO_LINK" type="video/mp4">
+    </video>
+</div>
+
+<script>
+    // No button ko dodge karwana
+    let no = document.getElementById("no");
+    no.addEventListener("mouseover", function() {
+        no.style.top = (Math.random() * 200 - 100) + "px";
+        no.style.left = (Math.random() * 200 - 100) + "px";
+        no.style.position = "relative";
+    });
+
+    // Yes par click → pic + video show
+    document.getElementById("yes").addEventListener("click", function() {
+        document.getElementById("container").style.display = "none";
+        document.getElementById("media").style.display = "block";
+    });
+</script>
+
+</body>
+</html>
